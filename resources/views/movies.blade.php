@@ -28,9 +28,11 @@
             <div class="movies-list">
                 @foreach ($data as $d)
                 <div class="movie">
-                    <div>
-                        <img src="http://image.tmdb.org/t/p/w500/{{$d['poster_path']}}" alt="" width="200">
-                    </div>
+                    <a href="{{ route('movie', ['id'=>$d['id']]) }}">
+                        <div>
+                            <img src="http://image.tmdb.org/t/p/w500/{{$d['poster_path']}}" alt="" width="200">
+                        </div>
+                    </a>
                     <div class="movie-content">
                         <p class="movie-title">{{$d['title']}}</p>
                         <table>
@@ -38,7 +40,7 @@
                                 <tr>
                                     <td align="right" class="release">Release Date</td>
                                     <td>:</td>
-                                    <td align="left" class="date">{{$d['release_date']}}</td>
+                                    <td align="left" class="date">{{date("F j, Y",strtotime($d['release_date']))}}</td>
                                 </tr>
                                 <tr>
                                     <td align="right" class="release">Rating</td>

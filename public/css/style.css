@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 62.5%;
     font-family: sans-serif;
 }
 
-nav{
+nav {
     display: flex;
     color: white;
     background: #000;
@@ -18,60 +19,62 @@ nav{
     padding: 0.5rem;
 }
 
-.movies-list{
+.movies-list {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 1rem;
     row-gap: 4rem;
     padding: 2rem 3rem;
 }
-.cinema-name{
+
+.cinema-name {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 1rem;
 }
 
-.movie{
-    box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.47);
--webkit-box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.47);
--moz-box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.47);
+.movie {
+    box-shadow: 4px 4px 21px -6px rgba(0, 0, 0, 0.47);
+    -webkit-box-shadow: 4px 4px 21px -6px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 4px 4px 21px -6px rgba(0, 0, 0, 0.47);
 
-padding: 2rem;
-border-radius: 10px;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
-.movie img{
+.movie img {
     object-fit: cover;
     /* text-align: center; */
 }
-.movie-img{
+
+.movie-img {
     text-align: center;
 }
 
-.movie-title{
+.movie-title {
     font-family: 'Anton', sans-serif;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.movie-content{
+.movie-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.release{
+.release {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.show-btn{
+.show-btn {
     outline: none;
     border: none;
     background-color: blueviolet;
@@ -84,13 +87,13 @@ justify-content: space-between;
     cursor: pointer;
 }
 
-.trending-title{
+.trending-title {
     font-weight: bold;
     font-size: 4rem;
     padding: 1rem 4rem;
 }
 
-.date{
+.date {
     font-size: 1.3rem;
     background-color: yellow;
     padding: 5px 10px;
@@ -98,9 +101,87 @@ justify-content: space-between;
     font-weight: 600;
 }
 
-.rating{
+.rating {
     font-size: 1.3rem;
     padding: 5px 10px;
     border-radius: 7px;
     font-weight: 600;
+}
+
+
+.movie-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Anton', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.movie-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-desc {
+    height: 100vh;
+    margin: 6rem 2rem;
+}
+
+.movie-desc-td {
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+.movie-description {
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+    line-height: 2rem;
+
+}
+
+.movie-desc-table {
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem 2rem;
+    box-shadow: 0px 1px 11px rgb(133, 131, 131);
+}
+
+.trailer-btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    background-color: brown;
+    color: white;
+    font-weight: bolder;
+    font-size: 2rem;
+    width: 50%;
+}
+
+.td-bold {
+    font-weight: bolder;
+}
+
+.td-info {
+    padding-left: 2rem;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.genre {
+    background-color: rgb(202, 244, 139);
+    padding: 0px 10px 0px 10px;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    font-weight: bold;
 }

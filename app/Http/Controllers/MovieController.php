@@ -18,6 +18,10 @@ class MovieController extends Controller
     }
 
     public function showMovie(string $id){
-        return view('movie');
+        $singleMovieApiUrl = "https://api.themoviedb.org/3/movie/${id}?api_key=2d8720d11e22cbfe0f674907a9445329";
+        $response = Http::withHeaders([
+            'accept' => 'application/json',
+            ])->get($singleMovieApiUrl)->json();
+        return view('movie',['data'=>$response]);
     }
 }
