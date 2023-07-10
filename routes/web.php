@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +29,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/api/v1/movies',[MovieController::class,'showMovies'])->name('movies');
+Route::get('/api/v1/movie/{id}',[MovieController::class,'showMovie'])->name('movie');
 require __DIR__.'/auth.php';
