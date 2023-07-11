@@ -12,11 +12,16 @@
     <div class="movie-container">
         <div class="movie-desc">
             <div class="img-container">
-                <img src="http://image.tmdb.org/t/p/w342/{{$data['poster_path']}}" alt="">
+                @if (str_starts_with($data['poster_path'],'http'))
+                    <img src="http://image.tmdb.org/t/p/w342/{{$data['poster_path']}}" alt="" width="350" height="500">
+                @else
+                            <img src="{{ asset('products/' . $data['poster_path']) }}" alt="" width="200">
+                    
+                @endif
             </div>
             <div class="movie-contents">
                 <div>
-                    <p class="title">{{$data['original_title']}}</p>
+                    <p class="title">{{$data['title']}}</p>
                     <table class="movie-desc-table">
                         <tr class="movie-desc-td">
                             <td class="td-bold">Runtime</td>
@@ -29,11 +34,9 @@
                             <td class="td-info">{{$data['budget']/10000000}}{{' Crores USD'}}</td>
                         </tr>
                         <tr class="movie-desc-td">
-                            <td class="td-bold">Genres</td>
+                            <td class="td-bold">Imdb Rating</td>
                             <td>:</td>
-                            @foreach ( $data['genres'] as $d )
-                                <td class="td-info genre" align="center">{{$d['name']}}</td>
-                            @endforeach
+                            <td class="td-info">{{$data['vote_average']}} ⭐</td>
                         </tr>
                         <tr class="movie-desc-td">
                             <td class="td-bold">Popularity</td>
@@ -47,9 +50,9 @@
                         </tr>
                         
                     </table>
-                    <p class="movie-description"><span style="font-weight: bolder">Description : </span>{{$data['overview']}}</p>
+                    <p class="movie-description"><span style="font-weight: bolder">Description : </span>{{$data['description']}}</p>
                 </div>
-                <a href="{{$data['homepage']}}"><button class="trailer-btn">Trailer</button></a>
+                <a href="{{$data['homepage']}}" target="_blank"><button class="trailer-btn">Trailer</button></a>
             </div>
         </div>
     </div>

@@ -29,6 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Route::get('/api/v1/movies',[MovieController::class,'showMovies'])->middleware(['auth', 'verified'])->name('movies');
 Route::get('/api/v1/movies',[MovieController::class,'showMovies'])->name('movies');
 Route::get('/api/v1/movie/{id}',[MovieController::class,'showMovie'])->name('movie');
+Route::get('/api/v1/movies/create',[MovieController::class,'create'])->name('create');
+Route::post('/store',[MovieController::class,'store']);
 require __DIR__.'/auth.php';

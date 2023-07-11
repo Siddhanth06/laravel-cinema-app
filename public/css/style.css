@@ -15,7 +15,7 @@ nav {
     display: flex;
     color: white;
     background: #000;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0.5rem;
 }
 
@@ -40,7 +40,7 @@ nav {
     -moz-box-shadow: 4px 4px 21px -6px rgba(0, 0, 0, 0.47);
 
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,6 @@ nav {
 
 .movie img {
     object-fit: cover;
-    /* text-align: center; */
 }
 
 .movie-img {
@@ -80,8 +79,8 @@ nav {
     background-color: blueviolet;
     font-weight: bold;
     color: white;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 1rem;
     margin-top: 1rem;
     width: 100%;
     cursor: pointer;
@@ -96,15 +95,15 @@ nav {
 .date {
     font-size: 1.3rem;
     background-color: yellow;
-    padding: 5px 10px;
-    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
     font-weight: 600;
 }
 
 .rating {
     font-size: 1.3rem;
-    padding: 5px 10px;
-    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
     font-weight: 600;
 }
 
@@ -117,6 +116,7 @@ nav {
 .img-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .title {
@@ -133,7 +133,7 @@ nav {
 
 .movie-desc {
     height: 100vh;
-    margin: 6rem 2rem;
+    margin: 0rem 4rem;
 }
 
 .movie-desc-td {
@@ -152,14 +152,14 @@ nav {
     border-radius: 1rem;
     margin-bottom: 3rem;
     padding: 1rem 2rem;
-    box-shadow: 0px 1px 11px rgb(133, 131, 131);
+    box-shadow: 0px 1px 1.1rem rgb(133, 131, 131);
 }
 
 .trailer-btn {
     cursor: pointer;
     outline: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 1rem;
     padding: 1rem 2rem;
     background-color: brown;
     color: white;
@@ -180,8 +180,32 @@ nav {
 
 .genre {
     background-color: rgb(202, 244, 139);
-    padding: 0px 10px 0px 10px;
+    padding: 0px 1rem 0px 1rem;
     border-radius: 2rem;
     margin-left: 1rem;
     font-weight: bold;
+}
+
+.logout-btn{
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.add-movie-btn{
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.logout-btn-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo-container{
+    display: flex;
 }

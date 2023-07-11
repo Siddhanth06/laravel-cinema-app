@@ -7,16 +7,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ URL::asset('css/style.css'); }}">
 </head>
-<body>
+<body>  
     
-    <header>
+    <header style="">
         <nav>
-            <div>
-            <img src="{{ URL::asset('images/logo.png'); }}" alt="" width="60">
-        </div>
-            <div class="cinema-name">
-                <img src="https://see.fontimg.com/api/renderfont4/9Y2DK/eyJyIjoiZnMiLCJoIjo5OCwidyI6MTUwMCwiZnMiOjY1LCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiIzM1M0Q0QiIsInQiOjF9/bGFyYXZlbCBjaW5lbWEgYXBw/nature-beauty-personal-use.png" alt=""
-                width="230">
+            <div class="logo-container">
+                <div>
+                    <img src="{{ URL::asset('images/logo.png'); }}" alt="" width="60">
+                </div>
+                <div class="cinema-name">
+                    <img src="https://see.fontimg.com/api/renderfont4/9Y2DK/eyJyIjoiZnMiLCJoIjo5OCwidyI6MTUwMCwiZnMiOjY1LCJmZ2MiOiIjRkZGRkZGIiwiYmdjIjoiIzM1M0Q0QiIsInQiOjF9/bGFyYXZlbCBjaW5lbWEgYXBw/nature-beauty-personal-use.png" alt=""
+                        width="230">
+                </div>
+            </div>
+            <div class="logout-btn-container">
+                <a href="{{route('create')}}">
+                    <button class="add-movie-btn">
+                        Add New Movie
+                    </button>
+                </a>
+                <a href="{{route('logout')}}">
+                    <button class="logout-btn">
+                        Logout
+                    </button>
+                </a>
             </div>
         </nav>
     </header>
@@ -27,10 +41,18 @@
             </h1>
             <div class="movies-list">
                 @foreach ($data as $d)
+                @php
+                    $d = (array)$d;
+                @endphp
                 <div class="movie">
                     <a href="{{ route('movie', ['id'=>$d['id']]) }}">
                         <div>
-                            <img src="http://image.tmdb.org/t/p/w500/{{$d['poster_path']}}" alt="" width="200">
+                            @if (str_starts_with($d['poster_path'],'http'))
+                                <img src="http://image.tmdb.org/t/p/w500/{{$d['poster_path']}}" alt="" width="200">
+                            @else
+                            {{-- <img src="{{ URL::asset('products/{{$d['poster_path']}}.png'); }}" alt="" width="200"> --}}
+                            <img src="{{ asset('products/' . $d['poster_path']) }}" alt="" width="200">
+                            @endif
                         </div>
                     </a>
                     <div class="movie-content">
