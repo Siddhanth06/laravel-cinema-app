@@ -1,3 +1,11 @@
+
+#Screenshots
+
+![Screenshot (4)](https://github.com/Siddhanth06/laravel-cinema-app/assets/89792184/12488747-5c07-47e1-9b86-6bbafaea4772)
+
+
+![Screenshot (5)](https://github.com/Siddhanth06/laravel-cinema-app/assets/89792184/532447c9-978b-48c9-902c-9c621b6eaed2)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
