@@ -26,6 +26,7 @@
     </a>
     
   </nav>
+  {{-- Add New Movie --}}
   <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-8 mt-5 mb-3">

@@ -15,7 +15,7 @@
                 @if (str_starts_with($data['poster_path'],'http'))
                     <img src="http://image.tmdb.org/t/p/w342/{{$data['poster_path']}}" alt="" width="350" height="500">
                 @else
-                            <img src="{{ asset('products/' . $data['poster_path']) }}" alt="" width="200">
+                    <img src="{{ asset('products/' . $data['poster_path']) }}" alt="" width="200">
                     
                 @endif
             </div>
@@ -48,7 +48,6 @@
                             <td>:</td>
                             <td class="td-info">{{date("F j, Y",strtotime($data['release_date']))}}</td>
                         </tr>
-                        
                     </table>
                     <p class="movie-description"><span style="font-weight: bolder">Description : </span>{{$data['description']}}</p>
                 </div>
