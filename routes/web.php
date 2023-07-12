@@ -31,14 +31,14 @@ Route::middleware('auth')->group(function () {
 
 
 // Route to show all movies
-Route::get('/api/v1/movies',[MovieController::class,'showMovies'])->name('movies');
+Route::get('/api/v1/movies',[MovieController::class,'showMovies'])->middleware(['auth', 'verified'])->name('movies');
 
 // Route to show movie description
-Route::get('/api/v1/movie/{id}',[MovieController::class,'showMovie'])->name('movie');
+Route::get('/api/v1/movie/{id}',[MovieController::class,'showMovie'])->middleware(['auth', 'verified'])->name('movie');
 
 // route to add new movie
-Route::get('/api/v1/movies/create',[MovieController::class,'create'])->name('create');
+Route::get('/api/v1/movies/create',[MovieController::class,'create'])->middleware(['auth', 'verified'])->name('create');
 
 // Post new movie data
-Route::post('/store',[MovieController::class,'store']);
+Route::post('/store',[MovieController::class,'store'])->middleware(['auth', 'verified']);
 require __DIR__.'/auth.php';
